@@ -22,7 +22,7 @@
   pointer-events: none;
 }
 .modal {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     position: relative;
   }
   @media screen and (min-width: 1200px) {
@@ -170,7 +170,7 @@ textarea {
 .checkbox:checked + .checkbox-icon {
   border-color: $accent-color;
   background-color: $accent-color;
-  background-image: url('../images/check.svg');
+  background-image: url('../images-3/check.svg');
   background-size: contain;
   background-origin: border-box;
 }
@@ -186,8 +186,8 @@ textarea {
   fill: #000000;
   width: 30px;
   height: 30px;
-  top: 8px;
-  right: 8px;
+  top: 0;
+  right: 0;
 
   background-color: #ffffff;
 
