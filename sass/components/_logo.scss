@@ -1,0 +1,23 @@
+.logo {
+  text-decoration: none;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.up {
+  display: block;
+  margin-right: 86px;
+}
+
+.logo {
+  color: $accent-color;
+  .word {
+    color: $title-text-color;
+  }
+  .text {
+    /* для лого в футере */
+    color: $white-text-color;
+  }
+}

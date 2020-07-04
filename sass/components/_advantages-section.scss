@@ -1,0 +1,41 @@
+.pluses {
+  display: flex;
+}
+.container .title {
+  margin: 0;
+  padding: 0;
+}
+.text {
+  margin: 0;
+  padding: 0;
+}
+.list .text {
+  width: 270px;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.subtitle {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.pluses .subtitle {
+  margin-bottom: 10px;
+}
+.option:not(:last-child) {
+  margin-right: 30px;
+}
+.icon {
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-bg-color;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
