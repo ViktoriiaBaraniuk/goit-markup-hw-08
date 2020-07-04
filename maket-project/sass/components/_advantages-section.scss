@@ -1,0 +1,54 @@
+.container .title {
+  margin: 0;
+  padding: 0;
+}
+.text {
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /*  display: inline-flex; */
+  width: 450px;
+  height: 120px;
+  /* justify-content: center;
+  align-items: center; */
+  background-color: $secondary-bg-color;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.list .text {
+  /*  width: 450px; */
+  font-size: 14px;
+  line-height: 1.71;
+}
+.subtitle {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
+.pluses .subtitle {
+  margin-bottom: 10px;
+}
+.pluses .option {
+  margin-bottom: 30px;
+}
+
+/* .pluses {
+  display: flex;
+}
+
+
+
+
+.option:not(:last-child) {
+  margin-right: 30px;
+}
+
+ */

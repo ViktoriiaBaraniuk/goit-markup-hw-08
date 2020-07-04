@@ -1,38 +1,3 @@
-.overlay {
-  display: block;
-  padding: 200px 452px;
-  max-width: 1600px;
-  min-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
-    url('../images/header.jpg');
-  /* установлен background-color: #757575; для того, чтобы видно было 
-   наш белый hero-title в случае, если не загрузится CSS-фоновая картинка под текстом */
-  background-color: #757575;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hero {
-  text-align: center;
-}
-
-.hero-title {
-  margin-top: 0;
-  margin-bottom: 40px;
-  color: $white-text-color;
-
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 .button {
   display: inline-block;
   padding: 10px 32px;
@@ -52,4 +17,100 @@
 
   text-decoration: none;
   cursor: pointer;
+}
+
+.overlay {
+  display: block;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* установлен background-color: #757575; для того, чтобы видно было 
+   наш белый hero-title в случае, если не загрузится CSS-фоновая картинка под текстом */
+  background-color: #757575;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 767px) {
+    height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../../images-3/hero.jpg');
+  }
+  @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../../images-3/hero@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 768px) {
+    height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../../images-3/hero-t.jpg');
+  }
+  @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../../images-3/hero-t@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../../images-3/hero-d.jpg');
+  }
+  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../../images-3/hero-d@2x.jpg');
+    }
+  }
+}
+.hero.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-title {
+  margin-top: 0;
+  /*  margin-bottom: 40px; */
+  color: $white-text-color;
+  text-align: center;
+  font-weight: 900;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }

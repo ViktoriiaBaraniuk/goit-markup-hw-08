@@ -1,3 +1,9 @@
+.works.section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .projects {
   display: flex;
   z-index: 0;
@@ -20,4 +26,14 @@
   padding: 27px 0px;
   background-color: rgba(47, 48, 58, 0.8);
   text-align: center;
+}
+.works-img {
+  display: block;
+  width: 370px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.unit-thumb {
+  height: 294px;
 }

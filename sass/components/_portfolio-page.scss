@@ -28,16 +28,34 @@
 }
 .variant {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.push:nth-child(-n + 3) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
+.push:nth-child(n + 4) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 }
 .push:not(:last-child) {
   margin-right: 8px;
 }
-.flex {
+/* .flex {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 .element {
   display: block;
   border-top-left-radius: 5px;
@@ -45,10 +63,14 @@
   overflow: hidden;
 }
 .flex .element {
-  width: 370px;
-  margin-right: 30px;
+  /* @media screen and (min-width: 480px) {
+    width: 450px;
+  } */
   margin-bottom: 30px;
-
+  @media screen and (min-width: 1200px) {
+    /* width: 370px; */
+    margin-right: 30px;
+  }
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
@@ -96,6 +118,7 @@
 
 .thumb {
   position: relative;
+  height: 294px;
   overflow: hidden;
 }
 .project .text-inside {
@@ -119,4 +142,45 @@
 .project .element:hover .text-inside,
 .project .element:focus .text-inside {
   transform: translateY(0%);
+}
+@media screen and (min-width: 768px) {
+  .project.list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project .element {
+    width: calc((100% - 2 * 30px) / 2);
+    /*  flex-grow: 1; */
+
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    &:nth-child(-n + 8) {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project.element {
+    width: calc((100% - 3 * 30px) / 3);
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+.project-img {
+  display: block;
+  width: 100%;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
